@@ -97,6 +97,10 @@ class QTOEngine:
         """
         d = dict(data)  # shallow copy so we don't mutate the original
 
+        # --- Alias: foundations → footings (sample_input uses "foundations") ---
+        if "foundations" in d and "footings" not in d:
+            d["footings"] = d.pop("foundations")
+
         # --- Levels ---
         levels = d.pop("levels", None)
         if isinstance(levels, dict):
@@ -118,6 +122,20 @@ class QTOEngine:
             if len(floors) >= 2:
                 d.setdefault("ff_floor_area", floors[1].get("area", 0))
                 d.setdefault("total_floor_area", floors[0].get("area", 0) + floors[1].get("area", 0))
+                # Derive stair_count: multi-storey buildings need at least 1 staircase
+                d.setdefault("stair_count", 1)
+
+            # --- Slabs: synthesize slab inputs from floors data ---
+            # If no explicit "slabs" key, create slab entries from floor areas
+            if "slabs" not in d:
+                slabs = []
+                for fl in floors:
+                    area = fl.get("area", 0)
+                    thickness = fl.get("slab_thickness", 0.20)
+                    if area > 0:
+                        slabs.append({"area": area, "thickness": thickness})
+                if slabs:
+                    d["slabs"] = slabs
 
         # --- Walls: convert {external_perimeter, internal_wall_length_20cm, ...} → list ---
         walls_raw = d.get("walls")
@@ -217,6 +235,7 @@ class QTOEngine:
         # ------------------------------------------------------------------
         # CONFIDENCE FILTER — items below 90% get smart statistical estimation
         # rather than silent exclusion, so the BOQ is always complete.
+        # Provenance: EXTRACTED = engine-calculated, AVG_FALLBACK = swapped to avg
         # ------------------------------------------------------------------
         exclusion_threshold = self._validator._thresholds.get("exclusion_threshold", 90.0)
         validated: list[dict] = []
@@ -231,6 +250,7 @@ class QTOEngine:
             item["confidence"] = vr.confidence
             item["flag"] = vr.flag
             item["estimated"] = False
+            item["provenance"] = "EXTRACTED"
 
             if vr.confidence >= exclusion_threshold:
                 validated.append(item)
@@ -242,6 +262,7 @@ class QTOEngine:
                 item["amount"] = round(item["quantity"] * item["rate"], 2)
                 item["flag"] = "ESTIMATED"
                 item["estimated"] = True
+                item["provenance"] = "AVG_FALLBACK"
                 item["confidence_note"] = (
                     f"Qty estimated from {project_type} historical average "
                     f"(calculated: {item['original_qty']:.3f} {item['unit']}, "
@@ -267,7 +288,7 @@ class QTOEngine:
         neck_cols = data.get("neck_columns", [])
         tie_beams = data.get("tie_beams", [])
         solid_walls = data.get("solid_block_walls", [])
-        gf_area = data.get("gf_area", data.get("plot_area", 153.0))
+        gf_area = data.get("gf_area", data.get("gf_floor_area", data.get("plot_area", 153.0)))
         longest_length = data.get("longest_length", 0.0)
         longest_width = data.get("longest_width", 0.0)
         has_road_base = data.get("has_road_base", False)
@@ -567,10 +588,19 @@ class QTOEngine:
             len_10 = sum(w.get("length", 0) for w in int_walls_10) or data.get("internal_wall_length_10cm", 0.0)
 
             # Wet / dry room breakdown
-            wet_types = {"toilet", "bathroom", "kitchen", "pantry", "laundry"}
+            # "wet" is the generic type from sample_input; specific types also qualify
+            wet_types = {"toilet", "bathroom", "kitchen", "pantry", "laundry", "wet"}
+            non_dry_types = wet_types | {"balcony"}
             wet_area = sum(rm.get("area", 0) for rm in rooms if rm.get("room_type", "").lower() in wet_types)
             wet_peri = sum(rm.get("perimeter", 0) for rm in rooms if rm.get("room_type", "").lower() in wet_types)
             dry_area = max(floor_area - wet_area, 0.0)
+            # Recompute per-floor dry perimeter from room data (more accurate than pre-computed)
+            room_dry_peri = sum(
+                rm.get("perimeter", 0) for rm in rooms
+                if rm.get("room_type", "").lower() not in non_dry_types
+            )
+            if room_dry_peri > 0:
+                dry_peri = room_dry_peri
 
             suffix = "_gf" if prefix == "C" else "_ff"
 
@@ -614,8 +644,13 @@ class QTOEngine:
             result.append(_item(f"{prefix}.6", f"Flooring — Wet Areas ({fl})", "m2",
                                 round(wet_area, 3), "Finishes", f"flooring_wet{suffix}", r))
 
-            # Skirting
-            sk = self.sup_calc.calculate_skirting(dry_peri, door_widths_all)
+            # Skirting — use wall-based perimeter: internal walls × 2 (both faces)
+            # + external perimeter (interior face only), which matches the
+            # authoritative formula: perimeter_of_dry_areas.
+            # Room-based dry_peri understates because it only counts room boundaries.
+            wall_based_dry_peri = (len_20 + len_10) * 2 + ext_perim
+            skirting_peri = wall_based_dry_peri if wall_based_dry_peri > 0 else dry_peri
+            sk = self.sup_calc.calculate_skirting(skirting_peri, door_widths_all)
             result.append(_item(f"{prefix}.7", f"Skirting ({fl})", "RM",
                                 sk["area_m"], "Finishes", f"skirting{suffix}", r))
 
@@ -695,14 +730,13 @@ class QTOEngine:
                            balcony_wp["area_m2"], "Finishes", "balcony_wp", r))
 
         # Waterproofing (1st floor wet areas only)
+        _wp_wet_types = {"toilet", "bathroom", "kitchen", "pantry", "laundry", "wet"}
         first_floor_wet = sum(
             rm.get("area", 0) for rm in data.get("first_floor_rooms", [])
-            if rm.get("room_type", "").lower() in
-            {"toilet", "bathroom", "kitchen", "pantry", "laundry"}
+            if rm.get("room_type", "").lower() in _wp_wet_types
         ) or sum(
             rm.get("area", 0) for rm in data.get("rooms", [])
-            if rm.get("room_type", "").lower() in
-            {"toilet", "bathroom", "kitchen", "pantry", "laundry"}
+            if rm.get("room_type", "").lower() in _wp_wet_types
         ) * 0.5
         wp = fc.calculate_waterproofing(first_floor_wet)
         items.append(_item("E.6", "Waterproofing \u2014 1st Floor Wet Areas", "m2",
@@ -718,8 +752,11 @@ class QTOEngine:
                            rw["area_m2"], "Finishes", "roof_waterproofing", r,
                            confidence_note=f"source={rw['source']}"))
 
-        # Combo Roof System
-        roof_area = data.get("roof_area", data.get("plot_area", 153.0))
+        # Combo Roof System — use roof slab area, fall back to top floor area
+        roof_area = data.get("roof_area",
+                             data.get("ff_floor_area",
+                             data.get("gf_floor_area",
+                             data.get("plot_area", 153.0))))
         crs = fc.calculate_combo_roof_system(roof_area)
         items.append(_item("E.8", "Combo Roof System", "m2",
                            crs["area_m2"], "Finishes", "combo_roof", r))
@@ -731,5 +768,26 @@ class QTOEngine:
         # Windows Schedule
         items.append(_item("E.10", "Windows (Schedule)", "m2",
                            op_res["total_window_area_m2"], "Finishes", "windows_schedule", r))
+
+        # False Ceiling (scaled from average if no schedule data)
+        avg = self._averages
+        false_ceil = fc.calculate_false_ceiling(
+            data.get("false_ceiling_area"),
+            plot_area, project_type, avg
+        )
+        if false_ceil["area_m2"] > 0:
+            items.append(_item("E.11", "False Ceiling", "m2",
+                               false_ceil["area_m2"], "Finishes", "false_ceiling", r,
+                               confidence_note=f"source={false_ceil['source']}"))
+
+        # Interlock Paving (scaled from average if no schedule data)
+        interlock = fc.calculate_interlock_paving(
+            data.get("interlock_paving_area"),
+            plot_area, project_type, avg
+        )
+        if interlock["area_m2"] > 0:
+            items.append(_item("E.12", "Interlock Paving", "m2",
+                               interlock["area_m2"], "Finishes", "interlock_paving", r,
+                               confidence_note=f"source={interlock['source']}"))
 
         return items
