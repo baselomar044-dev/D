@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "qto-engine"
+version = "15.0.0"
+description = "UAE QTO (Quantity Take-Off) Automation Engine — حساب الكميات الآلي"
+readme = "README.md"
+license = {text = "Proprietary"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Basel Omar"},
+]
+keywords = ["qto", "quantity-takeoff", "boq", "construction", "uae", "villa"]
+
+dependencies = [
+    "ezdxf>=0.18",
+    "openpyxl>=3.1",
+    "shapely>=2.0",
+    "scipy>=1.11",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+pdf = [
+    "google-generativeai>=0.3",
+    "pdf2image>=1.16",
+    "Pillow>=10.0",
+]
+web = [
+    "fastapi>=0.100",
+    "uvicorn>=0.23",
+    "pydantic>=2.0",
+    "PyMuPDF>=1.23",
+    "requests>=2.31",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1",
+]
+all = ["qto-engine[pdf,web,dev]"]
+
+[project.scripts]
+qto = "src.main:main"
+
+[tool.setuptools.packages.find]
+include = ["src*", "config*"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]

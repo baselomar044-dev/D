@@ -1,0 +1,28 @@
+QTO TRAINING FILES IN DOWNLOADS
+Source reference: C:\Users\basel\Desktop\QS-HUB-V15\scripts\import_downloads_training.ts
+Status: verified against current Downloads content where possible
+
+VERIFIED EXISTING FILES
+
+1. C:\Users\basel\Downloads\The System\TINDER\3246 - B.O.Q.xlsx
+2. C:\Users\basel\Downloads\The System\TINDER\CLACULATION SHEET.xlsx
+3. C:\Users\basel\Downloads\The System\FINAL DRAWINGS\New folder (3)\BOQ - Villa (G+1).xlsx
+4. C:\Users\basel\Downloads\The System\FINAL DRAWINGS\New folder (3)\Esrimations details VILLA 5-12.xlsx
+5. C:\Users\basel\Downloads\The System\DWG\BOQ CRAFTEX - AL ROUYA AL MOTAKAMELA 971 22-4-2025.xlsx
+6. C:\Users\basel\Downloads\The System\TINDER\DOCUMENTS\3246 - B.O.Q\3246 - B.O.Q.xlsx
+7. C:\Users\basel\Downloads\The System\TINDER\DRAWINGS\Auto Cade\3246 AC.xlsx
+8. C:\Users\basel\Downloads\The System\PJ3\pj3.xlsx
+9. C:\Users\basel\Downloads\The System\pj4\pj4.xlsx
+
+REFERENCED IN IMPORT SCRIPT BUT NOT VERIFIED FOUND
+
+1. C:\Users\basel\Downloads\8. Tender CD\8. Tender CD\VOLUME III Bill of Quantities\Volume III Bill of Quantities.xlsx
+2. C:\Users\basel\Downloads\8. Tender CD\8. Tender CD\Calculation sheet.xlsx
+3. C:\Users\basel\Downloads\2 villas\villa estimation details.xlsx
+4. C:\Users\basel\Downloads\ali\estimation details.xlsx
+5. C:\Users\basel\Downloads\new villa mode\G+1+S.B+S.P\villa estimation details.xlsx
+
+Notes:
+- This file is a clean reference list for the training-related spreadsheets currently tied to the Downloads import flow.
+- The verified section is based on actual file existence checks.
+- The not verified section is based on the script reference list and may need path correction or extraction from archives.

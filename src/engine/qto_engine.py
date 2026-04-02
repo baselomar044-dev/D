@@ -88,11 +88,98 @@ class QTOEngine:
         self._validator = QTOValidator()
 
     # ------------------------------------------------------------------
+    @staticmethod
+    def _normalize_input(data: dict) -> dict:
+        """
+        Accept multiple input formats and normalise into the internal schema.
+        Handles the sample_input.json format (rooms dict, walls dict, levels dict)
+        as well as the DrawingData format from parsers.
+        """
+        d = dict(data)  # shallow copy so we don't mutate the original
+
+        # --- Levels ---
+        levels = d.pop("levels", None)
+        if isinstance(levels, dict):
+            d.setdefault("exc_depth", levels.get("excavation_depth", 1.5))
+            d.setdefault("gfsl_level", levels.get("gfsl_level", 0.30))
+            d.setdefault("gfl", levels.get("gfsl_level", 0.30))
+            d.setdefault("tb_depth", levels.get("tb_depth", 0.40))
+            d.setdefault("pcc_thickness", levels.get("pcc_thickness", 0.10))
+            if "staircase_steps" in levels:
+                d.setdefault("staircase_steps", levels["staircase_steps"])
+
+        # --- Floors → floor_height, gf_floor_area, ff_floor_area ---
+        floors = d.get("floors", [])
+        if floors:
+            d.setdefault("floor_height", floors[0].get("floor_height", 3.0))
+            d.setdefault("slab_thickness", floors[0].get("slab_thickness", 0.20))
+            if len(floors) >= 1:
+                d.setdefault("gf_floor_area", floors[0].get("area", 0))
+            if len(floors) >= 2:
+                d.setdefault("ff_floor_area", floors[1].get("area", 0))
+                d.setdefault("total_floor_area", floors[0].get("area", 0) + floors[1].get("area", 0))
+
+        # --- Walls: convert {external_perimeter, internal_wall_length_20cm, ...} → list ---
+        walls_raw = d.get("walls")
+        if isinstance(walls_raw, dict):
+            wall_list = []
+            ext_p = walls_raw.get("external_perimeter", 0)
+            int20 = walls_raw.get("internal_wall_length_20cm", 0)
+            int10 = walls_raw.get("internal_wall_length_10cm", 0)
+            if ext_p:
+                wall_list.append({"type": "external", "length": ext_p})
+            if int20:
+                wall_list.append({"type": "internal_20", "length": int20})
+            if int10:
+                wall_list.append({"type": "internal_10", "length": int10})
+            d["walls"] = wall_list
+            d.setdefault("external_perimeter", ext_p)
+            d.setdefault("internal_wall_length_20cm", int20)
+            d.setdefault("internal_wall_length_10cm", int10)
+
+        # --- Rooms: convert {ground_floor:[], first_floor:[]} → flat lists ---
+        rooms_raw = d.get("rooms")
+        if isinstance(rooms_raw, dict):
+            gf_rooms = []
+            for rm in rooms_raw.get("ground_floor", []):
+                gf_rooms.append({
+                    "name": rm.get("name", ""),
+                    "area": rm.get("area", 0),
+                    "perimeter": rm.get("perimeter", 0),
+                    "room_type": rm.get("type", "dry"),
+                })
+            d["gf_rooms"] = gf_rooms
+            # 'rooms' must be a flat list of all rooms (GF + FF) for whole-building queries
+            d["rooms"] = gf_rooms  # will be extended below with ff_rooms
+
+            ff_rooms = []
+            for rm in rooms_raw.get("first_floor", []):
+                ff_rooms.append({
+                    "name": rm.get("name", ""),
+                    "area": rm.get("area", 0),
+                    "perimeter": rm.get("perimeter", 0),
+                    "room_type": rm.get("type", "dry"),
+                })
+            d["first_floor_rooms"] = ff_rooms
+            d["rooms"] = gf_rooms + ff_rooms  # flat list of all rooms
+
+            # Compute dry perimeters
+            wet_types = {"toilet", "bathroom", "kitchen", "pantry", "laundry", "wet"}
+            gf_dry_peri = sum(rm["perimeter"] for rm in gf_rooms if rm["room_type"] not in wet_types)
+            ff_dry_peri = sum(rm["perimeter"] for rm in ff_rooms if rm["room_type"] not in wet_types)
+            d.setdefault("gf_dry_area_perimeter", gf_dry_peri)
+            d.setdefault("ff_dry_area_perimeter", ff_dry_peri)
+            d.setdefault("dry_area_perimeter", gf_dry_peri + ff_dry_peri)
+
+        return d
+
+    # ------------------------------------------------------------------
     def run(self, data: dict) -> list[dict]:
         """
         Entry point.  `data` must conform to the DrawingData / sample_input schema.
         Returns a list of BOQ line-item dicts.
         """
+        data = self._normalize_input(data)
         boq: list[dict] = []
         project_type = data.get("project_type", "G+1")
         plot_area = data.get("plot_area", 153.0)
@@ -433,7 +520,16 @@ class QTOEngine:
         r = self._rates
         fc = self.fin_calc
 
-        openings = data.get("openings", [])
+        openings_raw = data.get("openings", [])
+        # Normalise openings: accept flat list OR {doors:[], windows:[]} dict
+        if isinstance(openings_raw, dict):
+            openings = []
+            for d in openings_raw.get("doors", []):
+                openings.append({**d, "opening_type": "door"})
+            for w in openings_raw.get("windows", []):
+                openings.append({**w, "opening_type": "window"})
+        else:
+            openings = list(openings_raw)
 
         # Pre-compute openings totals
         op_res = fc.calculate_openings(openings)

@@ -1,0 +1,18 @@
+# Core engine (no external deps needed for calculation)
+ezdxf>=0.18
+openpyxl>=3.1
+shapely>=2.0
+scipy>=1.11
+numpy>=1.24
+
+# PDF parsing via Gemini Vision
+google-generativeai>=0.3
+pdf2image>=1.16
+Pillow>=10.0
+
+# Legacy V15 engine (FastAPI web UI)
+fastapi>=0.100
+uvicorn>=0.23
+pydantic>=2.0
+PyMuPDF>=1.23
+requests>=2.31

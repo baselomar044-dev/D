@@ -1,0 +1,91 @@
+{
+  "_comment": "Sample G+1 villa input — use with: python -m src.main --input samples/sample_input.json --type G+1",
+  "project_type": "G+1",
+  "plot_area": 557.0,
+  "plot_perimeter": 96.0,
+
+  "floors": [
+    {
+      "name": "Ground Floor",
+      "floor_height": 3.2,
+      "slab_thickness": 0.20,
+      "area": 220.0
+    },
+    {
+      "name": "First Floor",
+      "floor_height": 3.2,
+      "slab_thickness": 0.20,
+      "area": 200.0
+    }
+  ],
+
+  "foundations": [
+    {"label": "F1", "length": 1.8, "width": 1.8, "depth": 0.4, "count": 8},
+    {"label": "F2", "length": 2.0, "width": 1.5, "depth": 0.4, "count": 4},
+    {"label": "F3", "length": 1.5, "width": 1.5, "depth": 0.4, "count": 6}
+  ],
+
+  "tie_beams": [
+    {"label": "TB1", "length": 5.0, "width": 0.25, "depth": 0.60, "count": 10},
+    {"label": "TB2", "length": 3.5, "width": 0.25, "depth": 0.60, "count": 8}
+  ],
+
+  "columns": [
+    {"label": "C1", "length": 0.30, "width": 0.30, "qty": 12},
+    {"label": "C2", "length": 0.40, "width": 0.30, "qty": 6}
+  ],
+
+  "beams": [
+    {"label": "B1", "length": 5.0, "width": 0.25, "depth": 0.50, "count": 8},
+    {"label": "B2", "length": 3.5, "width": 0.25, "depth": 0.50, "count": 6}
+  ],
+
+  "walls": {
+    "external_perimeter": 64.0,
+    "internal_wall_length_20cm": 45.0,
+    "internal_wall_length_10cm": 18.0
+  },
+
+  "openings": {
+    "doors": [
+      {"type": "D1", "width": 1.0, "height": 2.1, "count": 8},
+      {"type": "D2", "width": 1.2, "height": 2.1, "count": 2},
+      {"type": "MD1", "width": 1.4, "height": 2.4, "count": 1}
+    ],
+    "windows": [
+      {"type": "W1", "width": 1.5, "height": 1.2, "count": 6},
+      {"type": "W2", "width": 2.0, "height": 1.5, "count": 4},
+      {"type": "W3", "width": 1.0, "height": 0.6, "count": 3}
+    ]
+  },
+
+  "rooms": {
+    "ground_floor": [
+      {"name": "Majlis", "area": 25.0, "perimeter": 20.0, "type": "dry"},
+      {"name": "Living Room", "area": 30.0, "perimeter": 22.0, "type": "dry"},
+      {"name": "Kitchen", "area": 15.0, "perimeter": 16.0, "type": "wet"},
+      {"name": "Bathroom 1", "area": 5.0, "perimeter": 9.0, "type": "wet"},
+      {"name": "Bathroom 2", "area": 4.5, "perimeter": 8.5, "type": "wet"},
+      {"name": "Corridor", "area": 12.0, "perimeter": 14.0, "type": "dry"},
+      {"name": "Maid Room", "area": 9.0, "perimeter": 12.0, "type": "dry"},
+      {"name": "Laundry", "area": 4.0, "perimeter": 8.0, "type": "wet"}
+    ],
+    "first_floor": [
+      {"name": "Master Bedroom", "area": 22.0, "perimeter": 19.0, "type": "dry"},
+      {"name": "Master Bathroom", "area": 8.0, "perimeter": 12.0, "type": "wet"},
+      {"name": "Bedroom 2", "area": 16.0, "perimeter": 16.0, "type": "dry"},
+      {"name": "Bedroom 3", "area": 14.0, "perimeter": 15.0, "type": "dry"},
+      {"name": "Bathroom 3", "area": 5.0, "perimeter": 9.0, "type": "wet"},
+      {"name": "Corridor", "area": 10.0, "perimeter": 13.0, "type": "dry"},
+      {"name": "Balcony", "area": 8.0, "perimeter": 12.0, "type": "balcony"}
+    ]
+  },
+
+  "levels": {
+    "excavation_depth": 1.5,
+    "gfsl_level": 0.30,
+    "foundation_depth": 1.2,
+    "pcc_thickness": 0.10,
+    "staircase_steps": 24
+  }
+}
