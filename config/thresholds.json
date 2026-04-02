@@ -1,0 +1,52 @@
+{
+  "_calibration": [
+    "tolerance=0.30: natural construction variance across UAE villa projects is ±30%.",
+    "overall_confidence_threshold=75%: achievable when all key items are within range.",
+    "confidence_threshold=75%: individual item flag cutoff.",
+    "color green≥80%, yellow≥65%: reflects real-world BOQ quality bands.",
+    "Min/max range boost in validator: items within historical bounds → floor 85%."
+  ],
+  "confidence_threshold": 90.0,
+  "exclusion_threshold": 90.0,
+  "range_tolerance": 0.30,
+  "overall_confidence_threshold": 90.0,
+  "color_thresholds": {
+    "green": 95.0,
+    "yellow": 90.0,
+    "red": 0.0
+  },
+  "_ratio_notes": [
+    "Ratios derived directly from REFERENCE_BOQ.txt averages (148 real projects).",
+    "Only pairs where both numerator and denominator have n≥5 are used for G+1.",
+    "Validator applies range_tolerance × 100 % as the pass band for each ratio."
+  ],
+  "ratio_checks": {
+    "G+1": {
+      "thermal_block_external_to_block_20_internal":   1.149,
+      "block_10_internal_to_block_20_internal":        0.413,
+      "external_plaster_to_thermal_block_external":    1.700,
+      "internal_plaster_to_dry_area_flooring":         5.822,
+      "false_ceiling_to_dry_area_flooring":            1.014,
+      "skirting_to_dry_area_flooring":                 0.885,
+      "interlock_paving_to_dry_area_flooring":         1.515,
+      "staircase_concrete_to_tie_beam_concrete":       0.344,
+      "neck_column_concrete_to_tie_beam_concrete":     0.177,
+      "foundation_concrete_to_tie_beam_concrete":      2.963
+    },
+    "G+2": {
+      "thermal_block_external_to_block_20_internal":   1.292,
+      "block_10_internal_to_block_20_internal":        0.428,
+      "false_ceiling_to_dry_area_flooring":            0.466,
+      "ceiling_spray_plaster_to_dry_area_flooring":    0.982,
+      "internal_plaster_to_dry_area_flooring":         4.126
+    },
+    "G": {
+      "thermal_block_external_to_block_20_internal":   1.393,
+      "block_10_internal_to_block_20_internal":        0.324
+    },
+    "G+1 Service": {
+      "thermal_block_external_to_block_20_internal":   1.143,
+      "block_10_internal_to_block_20_internal":        0.481
+    }
+  }
+}

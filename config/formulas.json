@@ -1,0 +1,584 @@
+{
+  "_source": "Ai QTO equations.pdf — authoritative formula specification",
+  "sub_structure": [
+    {
+      "name": "Foundation — Concrete",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "width",
+        "length",
+        "depth",
+        "count"
+      ],
+      "formula_python": "sum(w * l * d * n  for each footing type)",
+      "description": "width × length × depth × count  (per footing type, summed)"
+    },
+    {
+      "name": "Foundation — PCC",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "length",
+        "width",
+        "count",
+        "pcc_thickness=0.10"
+      ],
+      "formula_python": "sum((l + 0.20) * (w + 0.20) * pcc_thickness * n  for each footing type)",
+      "description": "(length + 0.20) × (width + 0.20) × count × pcc_thickness (0.10 m)"
+    },
+    {
+      "name": "Foundation — Bitumen Waterproofing",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "width",
+        "length",
+        "depth",
+        "count"
+      ],
+      "formula_python": "sum((w*l + 2*(w+l)*d) * n  for each footing type)",
+      "description": "(area + perimeter × depth) × count  (per footing type, summed)"
+    },
+    {
+      "name": "Neck Columns — Concrete",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "width",
+        "length",
+        "count",
+        "GFL",
+        "exc_depth",
+        "tb_depth",
+        "pcc_thickness"
+      ],
+      "formula_python": "height = GFL + exc_depth - tb_depth - pcc_thickness\nvolume = width * length * height * count",
+      "description": "width × length × height × count;  Height = GFL + exc_depth − tb_depth − pcc_thickness"
+    },
+    {
+      "name": "Tie Beams — Concrete",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "length",
+        "width",
+        "depth",
+        "count"
+      ],
+      "formula_python": "sum(l * w * d * n  for each beam type)",
+      "description": "length × width × depth × count  (per beam type, summed)"
+    },
+    {
+      "name": "Tie Beams — PCC",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "length",
+        "width",
+        "count",
+        "pcc_thickness=0.10"
+      ],
+      "formula_python": "sum(l * (w + 0.20) * pcc_thickness * n  for each beam type)",
+      "description": "length × (width + 0.20) × pcc_thickness (0.10 m) × count"
+    },
+    {
+      "name": "Tie Beams — Bitumen Waterproofing",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "length",
+        "depth",
+        "count"
+      ],
+      "formula_python": "sum(l * d * 2 * n  for each beam type)",
+      "description": "length × depth × 2 × count  (two side faces)"
+    },
+    {
+      "name": "Solid Block Work (Below Grade)",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "wall_length",
+        "count",
+        "GFL",
+        "exc_depth",
+        "tb_depth",
+        "pcc_thickness"
+      ],
+      "formula_python": "height = GFL + exc_depth - tb_depth - pcc_thickness\narea = sum(wall_length * height * count)",
+      "description": "length × (GFL + exc_depth − tb_depth − pcc_thickness)"
+    },
+    {
+      "name": "Solid Block Work — Bitumen Waterproofing",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "solid_block_area"
+      ],
+      "formula_python": "bitumen = solid_block_area * 2",
+      "description": "solid_block_area × 2  (both faces)"
+    },
+    {
+      "name": "Slab on Grade — Concrete",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "gf_area",
+        "thickness=0.10"
+      ],
+      "formula_python": "volume = gf_area * thickness",
+      "description": "GF_area × thickness (default 0.10 m)"
+    },
+    {
+      "name": "Excavation",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "longest_length",
+        "longest_width",
+        "exc_depth"
+      ],
+      "formula_python": "area = (2 + longest_length) * (2 + longest_width)\nvolume = area * exc_depth",
+      "description": "(2m + longest_length) × (2m + longest_width) = area;  area × exc_depth = volume"
+    },
+    {
+      "name": "Back Filling",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "exc_area",
+        "exc_depth",
+        "gfsl_level",
+        "all_placed_concrete_volumes"
+      ],
+      "formula_python": "gross = exc_area * (exc_depth + gfsl_level)\nnet   = max(gross - all_placed_concrete_volumes, 0)",
+      "description": "(exc_area × (exc_depth + GFSL)) − all_placed_concrete_volumes;  excludes excavation and sand-fill volumes"
+    },
+    {
+      "name": "Anti-Termite Treatment",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "total_pcc_area",
+        "slab_on_grade_area"
+      ],
+      "formula_python": "area = (total_pcc_area + slab_on_grade_area) * 1.15",
+      "description": "(total_pcc_area + slab_on_grade_area) × 1.15"
+    },
+    {
+      "name": "Polyethylene Sheet",
+      "category": "Sub-Structure",
+      "unit": "m2",
+      "inputs": [
+        "total_pcc_area",
+        "slab_on_grade_area"
+      ],
+      "formula_python": "area = total_pcc_area + slab_on_grade_area",
+      "description": "total_pcc_area + slab_on_grade_area"
+    },
+    {
+      "name": "Sand Filling Under Ground Floor Slab",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "gf_area",
+        "thickness=0.30"
+      ],
+      "formula_python": "volume = gf_area * thickness",
+      "description": "gf_area × thickness (default 0.30 m)"
+    },
+    {
+      "name": "Road Base",
+      "category": "Sub-Structure",
+      "unit": "m3",
+      "inputs": [
+        "exc_area",
+        "thickness=0.25"
+      ],
+      "formula_python": "volume = exc_area * thickness",
+      "description": "exc_area × thickness (default 0.25 m)"
+    }
+  ],
+  "super_structure": [
+    {
+      "name": "Slabs — Concrete",
+      "category": "Super-Structure",
+      "unit": "m3",
+      "inputs": [
+        "area",
+        "thickness"
+      ],
+      "formula_python": "volume = sum(area * thickness  for each slab)",
+      "description": "area × thickness  (per slab, summed)"
+    },
+    {
+      "name": "Beams — Concrete",
+      "category": "Super-Structure",
+      "unit": "m3",
+      "inputs": [
+        "length",
+        "width",
+        "depth",
+        "slab_thickness",
+        "count"
+      ],
+      "formula_python": "volume = sum(l * w * max(d - slab_thickness, 0) * n  for each beam type)",
+      "description": "length × width × (depth − slab_thickness) × count  (excludes slab portion)"
+    },
+    {
+      "name": "Columns — Concrete",
+      "category": "Super-Structure",
+      "unit": "m3",
+      "inputs": [
+        "length",
+        "width",
+        "floor_height",
+        "qty"
+      ],
+      "formula_python": "volume = sum(l * w * floor_height * qty  for each column type)",
+      "description": "length × width × floor_height × qty  (per column type, summed)"
+    },
+    {
+      "name": "Staircase — Concrete",
+      "category": "Super-Structure",
+      "unit": "m3",
+      "inputs": [
+        "floor_height",
+        "stair_width",
+        "stair_count",
+        "slab_thickness"
+      ],
+      "formula_python": "steps = round(floor_height / 0.175)\ngoing = 0.25\nriser = floor_height / steps\ninclined_len = sqrt((steps*going)**2 + floor_height**2)\nwaist_vol = inclined_len * stair_width * 0.15\nstep_vol   = 0.5 * going * riser * stair_width * steps\nlanding_vol= stair_width * stair_width * slab_thickness\nvolume     = (waist_vol + step_vol + landing_vol) * stair_count",
+      "description": "(inclined_waist_vol + step_vol + landing_vol) × stair_count"
+    },
+    {
+      "name": "Dry Area Flooring",
+      "category": "Super-Structure",
+      "unit": "m2",
+      "inputs": [
+        "total_floor_area",
+        "wet_area"
+      ],
+      "formula_python": "area = max(total_floor_area - wet_area, 0)",
+      "description": "total_floor_area − wet_area"
+    },
+    {
+      "name": "Skirting",
+      "category": "Super-Structure",
+      "unit": "RM",
+      "inputs": [
+        "dry_area_perimeter",
+        "door_widths"
+      ],
+      "formula_python": "length = max(dry_area_perimeter - 0.40 * sum(door_widths), 0)",
+      "description": "perimeter_of_dry_areas − (40% × sum of door widths)"
+    },
+    {
+      "name": "Paint (Internal Walls)",
+      "category": "Super-Structure",
+      "unit": "m2",
+      "inputs": [
+        "skirting_length",
+        "floor_height"
+      ],
+      "formula_python": "area = skirting_length * floor_height",
+      "description": "skirting_length × floor_height"
+    },
+    {
+      "name": "Dry Areas Ceiling",
+      "category": "Super-Structure",
+      "unit": "m2",
+      "inputs": [
+        "dry_area_flooring"
+      ],
+      "formula_python": "area = dry_area_flooring",
+      "description": "= dry_area_flooring  (1:1)"
+    },
+    {
+      "name": "Parapet — Block Work",
+      "category": "Super-Structure",
+      "unit": "m2",
+      "inputs": [
+        "parapet_perimeter",
+        "parapet_height=1.0"
+      ],
+      "formula_python": "area = parapet_perimeter * parapet_height",
+      "description": "parapet_perimeter × parapet_height  (block wall around roof perimeter)"
+    },
+    {
+      "name": "Parapet — Concrete Capping",
+      "category": "Super-Structure",
+      "unit": "m3",
+      "inputs": [
+        "parapet_perimeter",
+        "parapet_thickness=0.20",
+        "parapet_capping_height=0.20"
+      ],
+      "formula_python": "volume = parapet_perimeter * parapet_thickness * parapet_capping_height",
+      "description": "parapet_perimeter × parapet_thickness × capping_height  (RC ring beam / capping on parapet)"
+    }
+  ],
+  "finishes": [
+    {
+      "name": "Wet Areas Flooring",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "toilets",
+        "bathrooms",
+        "kitchens",
+        "pantries",
+        "laundry"
+      ],
+      "formula_python": "area = toilets + bathrooms + kitchens + pantries + laundry",
+      "description": "toilets + bathrooms + kitchens + pantries + laundry"
+    },
+    {
+      "name": "Wall Tiles",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "wet_area_perimeter",
+        "floor_height"
+      ],
+      "formula_python": "area = wet_area_perimeter * max(floor_height - 0.50, 0)",
+      "description": "perimeter_of_wet_areas × (floor_height − 0.50 m)"
+    },
+    {
+      "name": "Wet Areas Ceiling",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "wet_areas_flooring"
+      ],
+      "formula_python": "area = wet_areas_flooring",
+      "description": "= wet_areas_flooring  (1:1)"
+    },
+    {
+      "name": "Balcony Flooring",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "balcony_area"
+      ],
+      "formula_python": "area = balcony_area",
+      "description": "balcony_area  (0 if none)"
+    },
+    {
+      "name": "Marble Threshold",
+      "category": "Finishes",
+      "unit": "RM",
+      "inputs": [
+        "door_widths"
+      ],
+      "formula_python": "length = sum(door_widths)",
+      "description": "sum of widths of all doors"
+    },
+    {
+      "name": "Block 20cm — External",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "external_perimeter",
+        "floor_height",
+        "windows_area",
+        "main_door_area"
+      ],
+      "formula_python": "area = max(external_perimeter * floor_height - (windows_area + main_door_area), 0)",
+      "description": "(external_villa_length × floor_height) − (windows_area + main_door_area)"
+    },
+    {
+      "name": "Block 20cm — Internal",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "int_wall_length_20cm",
+        "floor_height",
+        "door_areas"
+      ],
+      "formula_python": "area = max(int_wall_length_20cm * floor_height - 0.40 * door_areas, 0)",
+      "description": "(20 cm internal walls × floor_height) − 40% × door_areas"
+    },
+    {
+      "name": "Block 10cm — Internal",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "int_wall_length_10cm",
+        "floor_height",
+        "door_areas"
+      ],
+      "formula_python": "area = max(int_wall_length_10cm * floor_height - 0.40 * door_areas, 0)",
+      "description": "(10 cm internal walls × floor_height) − 40% × door_areas"
+    },
+    {
+      "name": "Internal Plaster",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "internal_walls_area",
+        "external_walls_area",
+        "doors_area",
+        "windows_area"
+      ],
+      "formula_python": "gross = internal_walls_area * 2 + external_walls_area\ndeductions = doors_area * 2 + windows_area\narea = max(gross - deductions, 0)",
+      "description": "((internal_walls_area × 2) + external_walls_area) − (doors_area × 2 + windows_area)"
+    },
+    {
+      "name": "External Villa Walls Finish",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "external_perimeter",
+        "floor_height",
+        "floor_count=2",
+        "parapet=1.5"
+      ],
+      "formula_python": "area = external_perimeter * (floor_count * floor_height + parapet)",
+      "description": "external_perimeter × (2 × floor_height + 1.5 m)"
+    },
+    {
+      "name": "Waterproofing (1st Floor Wet Areas)",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "first_floor_wet_area",
+        "balcony_area"
+      ],
+      "formula_python": "area = first_floor_wet_area + balcony_area",
+      "description": "all 1st floor wet areas + balcony flooring area"
+    },
+    {
+      "name": "Combo Roof System",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "roof_slab_area"
+      ],
+      "formula_python": "area = roof_slab_area * 1.2",
+      "description": "roof_slab_area × 1.2  (20% uplift for upturns and overlaps)"
+    },
+    {
+      "name": "Openings — Doors",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "door_types"
+      ],
+      "formula_python": "area = sum(width * height * count  for each door type)",
+      "description": "length × width × count  (per door type, summed)"
+    },
+    {
+      "name": "Openings — Windows",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "window_types"
+      ],
+      "formula_python": "area = sum(width * height * count  for each window type)",
+      "description": "length × width × count  (per window type, summed)"
+    },
+    {
+      "name": "Thermal Block (External Walls)",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "schedule_area_or_null",
+        "plot_area",
+        "project_type"
+      ],
+      "formula_python": "area = schedule_area  if provided  else  avg_thermal_block * (plot_area / avg_plot_area)",
+      "description": "per project schedule; fallback: scaled from historical average"
+    },
+    {
+      "name": "Interlock Paving",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "schedule_area_or_null",
+        "plot_area",
+        "project_type"
+      ],
+      "formula_python": "area = schedule_area  if provided  else  avg_interlock * (plot_area / avg_plot_area)",
+      "description": "per project schedule; fallback: scaled from historical average"
+    },
+    {
+      "name": "False Ceiling",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "schedule_area_or_null",
+        "plot_area",
+        "project_type"
+      ],
+      "formula_python": "area = schedule_area  if provided  else  avg_false_ceiling * (plot_area / avg_plot_area)",
+      "description": "per project schedule; fallback: scaled from historical average"
+    },
+    {
+      "name": "Roof Waterproofing",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "schedule_area_or_null",
+        "plot_area",
+        "project_type"
+      ],
+      "formula_python": "area = schedule_area  if provided  else  avg_roof_wp * (plot_area / avg_plot_area)",
+      "description": "per project schedule; fallback: scaled from historical average"
+    },
+    {
+      "name": "External Paint",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "external_villa_walls_area"
+      ],
+      "formula_python": "area = external_villa_walls_area",
+      "description": "= External Villa Walls Finish area  (same surface)"
+    },
+    {
+      "name": "Roof Screed",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "roof_area"
+      ],
+      "formula_python": "area = roof_area",
+      "description": "= roof_area  (sand-cement screed for drainage falls)"
+    },
+    {
+      "name": "Damp Proof Course (DPC)",
+      "category": "Finishes",
+      "unit": "RM",
+      "inputs": [
+        "external_perimeter",
+        "int_wall_length_20cm",
+        "int_wall_length_10cm"
+      ],
+      "formula_python": "length = external_perimeter + int_wall_length_20cm + int_wall_length_10cm",
+      "description": "external_perimeter + internal_wall_length_20cm + internal_wall_length_10cm"
+    },
+    {
+      "name": "Kitchen / Pantry Countertop",
+      "category": "Finishes",
+      "unit": "RM",
+      "inputs": [
+        "rooms"
+      ],
+      "formula_python": "length = 3.5 * kitchen_count + 2.5 * pantry_count",
+      "description": "3.5 RM per kitchen + 2.5 RM per pantry"
+    },
+    {
+      "name": "Boundary Wall — Block Work",
+      "category": "Finishes",
+      "unit": "m2",
+      "inputs": [
+        "boundary_perimeter",
+        "wall_height=2.5"
+      ],
+      "formula_python": "area = boundary_perimeter * wall_height",
+      "description": "boundary_perimeter × wall_height (default 2.5 m)"
+    }
+  ]
+}

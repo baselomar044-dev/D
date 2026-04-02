@@ -1,0 +1,1369 @@
+{
+  "generatedAt": "2026-03-24T22:04:47.323Z",
+  "totalProjects": 148,
+  "totalPatterns": 561,
+  "excludedFolders": [
+    {
+      "relPath": "a7md pj\\2 buildings",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "a7md pj\\bldg\\02-CONTRACT DOCUMENTS\\03-VOLUME 3 (BILL OF QUANTITY)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "a7md pj\\school",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "a7md pj\\school\\final sheets -school",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "a7md pj\\school\\Tender for Contractors",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\MOSQUE",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\2 bldgs G+13",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\37. Proposed Residential & Retail Bldg G+4Podium+18F+R - MAAS -KWEC",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\39. DAMAC LAGOONS- MS ISLAND OASIS PROPERTIES",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\G+3p+19 model",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\g+8",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\TOWER",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\Villa Community",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\wetransfer_726_2023-08-25_1328",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\wetransfer_728_2023-08-25_1409",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\wetransfer_730_2023-08-25_1412",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\wetransfer_tender-securety-building_2024-04-01_0757",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\done projects\\done payment\\wetransfer_vero-properties-plot-jvc10lfrp006_2023-10-16_0715",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "city creek\\on hold - not completed\\2",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "CONSULTANT\\2nd ptoject G+4 (29-3-2025)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "CONSULTANT\\2nd ptoject G+4 (29-3-2025)\\finishing",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "downloads\\G+4",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "downloads\\new projects\\dubai sky",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "downloads\\new projects\\dubai sky\\Vol-3",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "downloads\\new projects\\warsha\\BOQ and Specification",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "downloads\\wetransfer_3180394-krama-building-2-5-2025-zip_2025-05-06_0656",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "DUBAI SKY\\Tender Set\\Vol-3",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\G+2B +8+R",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\G+4 (1)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\G+4 (1)\\FINAL",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\tower",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\tower\\66 SARKOA TOWER",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\WAREHOUSE",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "eng.ibrahim\\done\\WAREHOUSE\\wetransfer_tender-given-to-contractors_2022-12-12_0752",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "ETHAR\\ABUDHABI\\done payment\\steel structure",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "INTERIOR DESIGN",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\BLDG",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\just cavalli",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MAJLIS",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\mosque modification",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\Ware house",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\warehouse",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\Done\\pending\\jh. labor camp",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\on hold\\g+2 bldg",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "jhangir\\on hold\\mosque",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)\\done payment\\400 (2)\\3",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)\\done payment\\400 (2)\\4",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)\\done payment\\400\\2",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)\\done payment\\New folder",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "landscape (ENG AMIN)\\GOING ON\\OFFICE",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "OST  CONTRACTING",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "OST  CONTRACTING\\G+12\\estmation decuments",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "OST  CONTRACTING\\G+12\\final estimation documents (OST)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "OST  CONTRACTING\\G+12\\final estimation documents (OST)\\list",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "other\\ENG AHMED HANY",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "other\\factory eng ahmed",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "other\\factory eng ahmed\\archive",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "other\\JUMAIRA RESTO",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "Santa-NABE ALMINA\\TOWER",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "Santa-NABE ALMINA\\TOWER\\DOC",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\archen gaflia\\final boq and calculation",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\Drawings 1270332",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\FINAL SUBMISSION",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\FULL SET CAD DRAWINGS_2024_08_24\\Villa",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\G+2 Building",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\g+3 12-2024",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\g+3 12-2024\\BOQ & Specification",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\GVVBHBH",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\Mr. Mohd Essa Almatroshi 6439739 Drawings",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\New folder",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\New folder (2)",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\revised tender\\Tender Documents",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\SERVICE BLOCK 12-1",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\str",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\str\\boq",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\T-1211 to quantity survey- TO Eng Basim-2023-10-17-Final-DM-wo-canopy-Last",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\T1226- DWG- MERGED- DAMAC- ABDELRAZAK-",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\Tender Docs for Mr.Rashid Alhajeri 6439654\\BOQ & Specification",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\Tender Docs For Mr.Said Mohamed 6439655",
+      "reason": "excluded"
+    },
+    {
+      "relPath": "warsha\\done\\VILLA 2025",
+      "reason": "excluded"
+    }
+  ],
+  "projects": [
+    {
+      "relPath": "3bdo\\additional k.b",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "3bdo\\additional k.b\\basel",
+      "type": "g",
+      "patterns": 4,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "3bdo\\G+1 abhu hail",
+      "type": "g1",
+      "patterns": 6,
+      "rawItems": 27,
+      "areaM2": null
+    },
+    {
+      "relPath": "3bdo\\mintenance",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "a7md pj\\wetransfer_full-tender-package-for-villa_2024-12-12_0716\\VOL.04 - BOQ",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 94,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\1 st",
+      "type": "g",
+      "patterns": 11,
+      "rawItems": 4,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\1607-SAEED ALYOHA",
+      "type": "g",
+      "patterns": 14,
+      "rawItems": 4,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\2nd - ismail al tamimy",
+      "type": "g",
+      "patterns": 9,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\agbullah ghanim (ARCH. ONLY)",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\AHMAD MOHAMMAD ABDULMALIK MOHAMMAD",
+      "type": "g",
+      "patterns": 7,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\Amac consultant",
+      "type": "g1",
+      "patterns": 11,
+      "rawItems": 3,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\arch service block",
+      "type": "g1service",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\COMPLETION",
+      "type": "g1",
+      "patterns": 2,
+      "rawItems": 32,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\For Tender - Naqi Villa",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 176,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\GHANIM ABDULREDHA GHANIM DWF",
+      "type": "g1",
+      "patterns": 17,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0026(25)KHALIFA AHMED ALUSTAD DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0030(24)ADEL KHAMIS ALMAZROEI DWF",
+      "type": "g",
+      "patterns": 2,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0055AHMED SULAIMAN ABDULLA ABDULREHMAN DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0064MOHD SULTAN HAMAD KHAMIS DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0071(24)ABDULLA MOHD JASSIM DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0075(24)MAYED MOHD SALEM ALYASI DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0076(24)ABDULLA JAFFER AL HAJ ALRAHMA DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\JEC-0133MAJID AL NAQBI DWF",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\New folder",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\SERVICE BLOCK IBRAHIM ALJAWI (1)new",
+      "type": "g1service",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\sultan",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\TENDER RASHED SALEM",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\TENDER-983",
+      "type": "g",
+      "patterns": 10,
+      "rawItems": 4,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\DONE PAYMENT\\VILLA MODIFICATION",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\20-4-2025",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\7-4-2025",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\enma2 comsultant",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\MS.AFRA (1)",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\New folder (3)",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\samir arkan 5-3-2025",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\TENDER 971",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\wetransfer_9081-approved-pdf-s_2025-04-07_1319",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\wetransfer_ali-saeed-awdh-nasser-altamimi_2025-03-12_0956",
+      "type": "g1",
+      "patterns": 6,
+      "rawItems": 54,
+      "areaM2": null
+    },
+    {
+      "relPath": "al sadeq cont\\DONE PROJECTS\\pending payment\\wetransfer_tender-plot-3560763-pdf_2025-04-28_0721",
+      "type": "g1",
+      "patterns": 5,
+      "rawItems": 35,
+      "areaM2": null
+    },
+    {
+      "relPath": "deset feild (hAMZA)\\DONE\\Done payment\\33",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "deset feild (hAMZA)\\DONE\\Done payment\\333-0790, Town Housae, Sabat",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "deset feild (hAMZA)\\DONE\\Done payment\\Hiten & Himel, 6316489, Model",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "deset feild (hAMZA)\\going 9on\\4210805- Al Warqaa",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 18,
+      "areaM2": null
+    },
+    {
+      "relPath": "deset feild (hAMZA)\\going 9on\\Tender Al Barsha Project\\Tender Al Barsha Project",
+      "type": "g",
+      "patterns": 4,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\11_TENDER",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\16 villas",
+      "type": "g",
+      "patterns": 2,
+      "rawItems": 16,
+      "areaM2": 3279.2
+    },
+    {
+      "relPath": "downloads\\2\\000 TENDER DOCUMENTS 2",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\JH",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\jhangir\\JH",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\jhangir\\New folder",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\jhangir\\wetransfer_tariq-saif-ahmad-almazrouei_2025-11-05_1051",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\New folder",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\new projects\\ali",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\new projects\\janagir",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\new projects\\sameer",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\new projects\\sameer\\ABDULLA HUSSAIN IBRAHIM ALI BADI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\new projects\\sameer\\onyx sameer",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\sameer",
+      "type": "g1",
+      "patterns": 6,
+      "rawItems": 41,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\sameer\\partial work",
+      "type": "g1",
+      "patterns": 6,
+      "rawItems": 52,
+      "areaM2": null
+    },
+    {
+      "relPath": "downloads\\sameer\\wetransfer_01-tender-documents_2025-07-01_1105",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "eng.wa2el\\khaled -shape",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 27,
+      "areaM2": null
+    },
+    {
+      "relPath": "eng.wa2el\\OneDrive_1_9-17-2024",
+      "type": "g",
+      "patterns": 2,
+      "rawItems": 21,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\ABDULLA ESSA OBAID SUROOR DWF",
+      "type": "g",
+      "patterns": 13,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\AHMAD IBRAHIM MOHAMAMD ALI ALSUWAIDI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\ahmed ali g+1",
+      "type": "g1",
+      "patterns": 5,
+      "rawItems": 60,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\al-zorah (ajman)",
+      "type": "g1",
+      "patterns": 9,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\Amal",
+      "type": "g",
+      "patterns": 4,
+      "rawItems": 19,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\extension",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\FAHAD MOHD HASSAN MALA ALI DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\faisal iqbal",
+      "type": "g",
+      "patterns": 12,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\FATMA DHAEN ALFALASI DWF",
+      "type": "g",
+      "patterns": 11,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\GHANIM ABDULREDHA GHANIM DWF",
+      "type": "g",
+      "patterns": 10,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\iskan cosultant",
+      "type": "g",
+      "patterns": 9,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JEC-0062 HUSSEIN ABDULRAHIM ALKHALSAN ALNUAIMI - DWF",
+      "type": "g",
+      "patterns": 4,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JEC-0071(24)ABDULLA MOHD JASSIM DWF",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 13,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JEC-0073 SAMI RUBAYA NASSIB JUMA - 30.7.23",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JEC-0136NASSER SALEH SALEM NASSER DWF",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JEC-0142MOHAMMED JASSIM MOHD AHLI DWF",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\jh",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\JH AUG",
+      "type": "g1",
+      "patterns": 1,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\jhangir 5-5",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 21,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\KHALIFA SALIM KHALIFA ALKAABI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 14,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MANA AL KHOORY DWF",
+      "type": "g",
+      "patterns": 9,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MARYAM",
+      "type": "g1",
+      "patterns": 9,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\modification",
+      "type": "g",
+      "patterns": 2,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\modification quasis (visited)",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\mohamed g+1",
+      "type": "g1",
+      "patterns": 5,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MOHAMMED OBAID BIN BISHER DWF",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MOHAMMED SULTAN IBRAHIM DWF",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 44,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\MOHD HUSSAIN HASSAN ABDULLA TAHER DWF",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\New folder",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 29,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\new projects 27-01-2025",
+      "type": "g1",
+      "patterns": 9,
+      "rawItems": 27,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\next-jhangir 2-3-2025",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 21,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\OBAID NASSER OBAID MAHMOOD ASHOOR",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\S.B IBRAHIM ALJAWI",
+      "type": "g1service",
+      "patterns": 0,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\SHAMSA MOHD SALEH SAFER - 18.9.23",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\tajvand",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\talent consultant",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\TENDER 988 DXB",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\TENDER-1021",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\TENDER-1111",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\TENDER-931",
+      "type": "g1",
+      "patterns": 17,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\TINDER saeed s.b",
+      "type": "g1service",
+      "patterns": 7,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\tindering & steel",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\town house",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\true consultant",
+      "type": "g",
+      "patterns": 6,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\VILLA 1",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\VILLA 2",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\yousef elswaidi tender-final_2023-10-02_1023",
+      "type": "g",
+      "patterns": 9,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\Done\\Done payment\\zorah",
+      "type": "g1",
+      "patterns": 9,
+      "rawItems": 11,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\on going\\TENDER FOR ALHARITH AL MOOSA",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\on going\\TENDER FOR MR ABDULRAHMAN ALTAMIMI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\on going\\TENDER FOR MR RASHED ALJASMI",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "jhangir\\on going\\TENDER FOR MR RASHED ALJASMI\\TENDER FOR MR RASHED ALJASMI",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "New advance",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 13,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\ali",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\71111777 Tender documents",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\ali",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\FATIMA HUSSEIN MURAD DWF",
+      "type": "g",
+      "patterns": 9,
+      "rawItems": 10,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\Hamad Suroor",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 18,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\HUSSAIN IBRAHIM",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\june 2024",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\RASHED MAZROUI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 15,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\STR ONLY",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 6,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\Tender Docks (Mrs Farah Ali-9253318)",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\TENDER FOLDER-M.ALFALASI",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 24,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\DONE\\DONE PAYMENT\\wetransfer_3-drawings-noc-s_2024-05-09_0706",
+      "type": "g",
+      "patterns": 3,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "new quasis ALI\\ON GOING\\ALI",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 20,
+      "areaM2": null
+    },
+    {
+      "relPath": "other\\jhangit\\final",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 9,
+      "areaM2": null
+    },
+    {
+      "relPath": "other\\samir",
+      "type": "g1",
+      "patterns": 2,
+      "rawItems": 25,
+      "areaM2": null
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\1100 (4 projects)",
+      "type": "g",
+      "patterns": 5,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\1100 (4 projects)\\eissa",
+      "type": "g",
+      "patterns": 7,
+      "rawItems": 1,
+      "areaM2": null
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\1100 (4 projects)\\fatma",
+      "type": "g1",
+      "patterns": 6,
+      "rawItems": 1,
+      "areaM2": 586.9000000000001
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\1100 (4 projects)\\hassan",
+      "type": "g",
+      "patterns": 3,
+      "rawItems": 1,
+      "areaM2": null
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\1100 (4 projects)\\m.dawood",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 24,
+      "areaM2": null
+    },
+    {
+      "relPath": "projects (eng.far7an)\\Done projects\\villa g+1 (abdullah saleh )",
+      "type": "g1",
+      "patterns": 3,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "Santa-NABE ALMINA\\S.B 2",
+      "type": "g1service",
+      "patterns": 0,
+      "rawItems": 7,
+      "areaM2": null
+    },
+    {
+      "relPath": "Santa-NABE ALMINA\\SERVICE BLOCK",
+      "type": "g1service",
+      "patterns": 0,
+      "rawItems": 62,
+      "areaM2": null
+    },
+    {
+      "relPath": "Santa-NABE ALMINA\\villa al-mass",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "Thomas , new client\\Rashed Al Jumairi Al Muhairi - Tender Docs V1\\Volume III BOQ",
+      "type": "g",
+      "patterns": 1,
+      "rawItems": 20,
+      "areaM2": null
+    },
+    {
+      "relPath": "um alquin new old\\ESTIMATION",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 8,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\done payment\\APPROVED DARWINGS,NOCS AND BUILDING PERMIT",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 0,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\done payment\\APPROVED DARWINGS,NOCS AND BUILDING PERMIT\\APPROVED DARWINGS,NOCS AND BUILDING PERMIT",
+      "type": "g",
+      "patterns": 3,
+      "rawItems": 4,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\done payment\\dubai",
+      "type": "g1",
+      "patterns": 15,
+      "rawItems": 5,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\done payment\\shar\\TINDER",
+      "type": "g",
+      "patterns": 6,
+      "rawItems": 37,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\id\\Going on\\New folder",
+      "type": "g",
+      "patterns": 0,
+      "rawItems": 12,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\new 2 villas\\sh",
+      "type": "g1",
+      "patterns": 16,
+      "rawItems": 2,
+      "areaM2": null
+    },
+    {
+      "relPath": "unknown jobs\\pending payment\\sharjah projects\\TINDER",
+      "type": "g",
+      "patterns": 6,
+      "rawItems": 37,
+      "areaM2": null
+    }
+  ]
+}

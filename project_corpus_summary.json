@@ -1,0 +1,135 @@
+{
+  "generatedAt": "2026-03-27T19:02:37.317Z",
+  "rawCandidates": {
+    "total": 526,
+    "bySource": {
+      "projects_estimation": 479,
+      "basel_dwg": 47
+    },
+    "importedProjects": 318,
+    "excludedDuringCuration": 208
+  },
+  "sourceRoots": {
+    "projects_estimation": "B:\\work\\projects estimation",
+    "basel_dwg": "B:\\work\\BASEL DWG",
+    "for_life": "B:\\work\\projects estimation\\For Life",
+    "materials": "B:\\work\\projects estimation\\materials"
+  },
+  "totalProjects": 318,
+  "bySource": {
+    "projects_estimation": 275,
+    "basel_dwg": 43
+  },
+  "byType": {
+    "ground villas": 233,
+    "g+1 villas": 33,
+    "building and towers": 18,
+    "ware houses": 18,
+    "g+1 + service block villas": 15,
+    "unknown_or_mixed": 1
+  },
+  "byEmirate": {
+    "Dubai": 195,
+    "Unknown": 85,
+    "Sharjah": 19,
+    "Ajman": 12,
+    "Umm Al Quwain": 4,
+    "Ras Al Khaimah": 3
+  },
+  "bySiteArea": {
+    "Dubai": 88,
+    "Unknown": 85,
+    "Al Awir": 46,
+    "Al Barsha": 19,
+    "Sharjah": 19,
+    "Dubai Creek": 13,
+    "Ajman": 9,
+    "Al Quoz": 6,
+    "Al Warqaa": 6,
+    "Jumeirah": 4,
+    "Mizhar": 4,
+    "Umm Al Quwain": 4,
+    "Al Khawaneej": 3,
+    "Al Mamzar": 3,
+    "Al Zorah": 3,
+    "Ras Al Khaimah": 3,
+    "DAMAC Lagoons": 1,
+    "Mirdif": 1,
+    "Muhaisnah": 1
+  },
+  "byTypeAndEmirate": {
+    "ground villas | Dubai": 143,
+    "ground villas | Unknown": 62,
+    "g+1 villas | Dubai": 20,
+    "ground villas | Sharjah": 13,
+    "building and towers | Dubai": 12,
+    "ware houses | Dubai": 11,
+    "g+1 villas | Unknown": 10,
+    "ground villas | Ajman": 10,
+    "g+1 + service block villas | Dubai": 9,
+    "g+1 + service block villas | Unknown": 5,
+    "building and towers | Unknown": 4,
+    "ground villas | Umm Al Quwain": 4,
+    "ware houses | Sharjah": 3,
+    "ware houses | Unknown": 3,
+    "g+1 villas | Sharjah": 2,
+    "building and towers | Ras Al Khaimah": 1,
+    "building and towers | Sharjah": 1,
+    "g+1 + service block villas | Ajman": 1,
+    "g+1 villas | Ras Al Khaimah": 1,
+    "ground villas | Ras Al Khaimah": 1,
+    "unknown_or_mixed | Unknown": 1,
+    "ware houses | Ajman": 1
+  },
+  "sizeAreaCoverage": {
+    "known": 238,
+    "unknown": 80,
+    "byUnit": {
+      "unknown": 231,
+      "sqm": 7
+    },
+    "byBucket": {
+      "numeric_unknown_unit": 231,
+      "250_499_sqm": 3,
+      "500_999_sqm": 2,
+      "2000_plus_sqm": 1,
+      "under_250_sqm": 1
+    }
+  },
+  "documentCoverage": {
+    "boqPresent": 258,
+    "calcPresent": 222,
+    "pricingPresent": 247,
+    "architecturePresent": 253,
+    "structurePresent": 240,
+    "specificationsPresent": 134,
+    "boqFormats": {
+      "xlsx": 194,
+      "xls": 70
+    },
+    "calcFormats": {
+      "xlsx": 213,
+      "xls": 18,
+      "csv": 1
+    },
+    "drawingFormats": {
+      "pdf": 303,
+      "dwf": 179,
+      "dwg": 145
+    }
+  },
+  "supplementalLibraries": [
+    {
+      "id": "for_life",
+      "role": "spec_style_reference",
+      "root": "B:\\work\\projects estimation\\For Life",
+      "relevantFileCount": 41
+    },
+    {
+      "id": "materials",
+      "role": "mixed_support_library",
+      "root": "B:\\work\\projects estimation\\materials",
+      "relevantFileCount": 319
+    }
+  ]
+}
